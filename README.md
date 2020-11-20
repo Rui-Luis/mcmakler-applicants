@@ -1,4 +1,4 @@
-## There's a deployed version for testing purposes here:
+## There's a deployed version here:
 [https://mcmakler-applicants.netlify.app/]
 
 ## How to run this project
