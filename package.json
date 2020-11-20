@@ -1,6 +1,5 @@
 {
   "name": "mcmakler-applicants",
-  "homepage": "http://rui-luis.github.io/mcmakler-applicants",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
