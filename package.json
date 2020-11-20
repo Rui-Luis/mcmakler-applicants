@@ -27,7 +27,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "proxy": "http://my-json-server.typicode.com/rui-luis/mcmakler-applicants/",
   "eslintConfig": {
     "extends": [
       "react-app",
