@@ -37,7 +37,7 @@ function ApplicantsList({ searchTerm, statusTerm, bidTerm }) {
   const [applicants, setApplicants] = useState([]);
 
   useEffect(() => {
-    axios.get("http://my-json-server.typicode.com/rui-luis/mcmakler-applicants/applicants").then(function (response) {
+    axios.get("https://my-json-server.typicode.com/rui-luis/mcmakler-applicants/applicants").then(function (response) {
       setApplicants(response.data);
     });
   }, []);
