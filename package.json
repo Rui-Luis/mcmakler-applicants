@@ -1,5 +1,6 @@
 {
   "name": "mcmakler-applicants",
+  "homepage": "http://rui-luis.github.io/mcmakler-applicants",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,9 +23,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "json-server": "json-server --watch db.json --port 5000",
-    "dev": "concurrently \"npm start\" \"npm run json-server\""
+    "dev": "concurrently \"npm start\" \"npm run json-server\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "http://my-json-server.typicode.com/rui-luis/mcmakler-applicants/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -45,6 +48,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "gh-pages": "^3.1.0",
     "json-server": "^0.16.3"
   }
 }
