@@ -20,6 +20,15 @@ function Applicant(props) {
   var letterOne = props.firstName.charAt(0);
   var letterTwo = props.lastName.charAt(0);
   var initials = letterOne + letterTwo;
+  
+  if (props.bid != null) {
+    var bidValue = "Bid " + props.bid + "€";
+  } else {
+    var bidValue = "No bid";
+  }
+  
+
+ 
 
   return (
       <Paper
@@ -46,7 +55,7 @@ function Applicant(props) {
           <Typography>{props.status}</Typography>
         </Box>
         <Box className="Bid-paper" elevation={0}>
-          <Typography>Bid {props.bid}€</Typography>
+          <Typography>{bidValue}</Typography>
         </Box>
       </Paper>
   );
