@@ -7,9 +7,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
+      <TopBar />
       <div className="container">
-        <TopBar />
-
         <Route path="/">
           <Search />
         </Route>
