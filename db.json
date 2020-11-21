@@ -68,9 +68,18 @@
       "first_name": "Friedrich", 
       "last_name": "Nietzsche", 
       "phone": "918335438", 
-      "email": "rita@gmail.com", 
+      "email": "nietzsche@gmail.com", 
       "status": "Appointment Set", 
       "bid": 1000000
+    },
+    { 
+      "id": 9, 
+      "first_name": "Immanuel", 
+      "last_name": "Kant", 
+      "phone": "918335438", 
+      "email": "i.kant@gmail.com", 
+      "status": "Appointment Set", 
+      "bid": null
     }
   ]
 }

@@ -27,6 +27,7 @@ function ApplicantsList({ searchTerm, statusTerm, bidTerm }) {
     .filter(
       (applicant) =>
         ("" === bidTerm && applicant.bid > 0) ||
+        ("none" === bidTerm && applicant.bid === null) ||
         ("less_than_100" === bidTerm && applicant.bid < 100000) ||
         ("100_300" === bidTerm &&
           applicant.bid >= 100000 &&

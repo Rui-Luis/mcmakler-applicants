@@ -96,6 +96,7 @@ function Search() {
                 placeholder="Bid"
               >
                 <MenuItem value="">All</MenuItem>
+                <MenuItem value="none">None</MenuItem>
                 <MenuItem value="less_than_100">Less than 100000</MenuItem>
                 <MenuItem value="100_300">100000-300000</MenuItem>
                 <MenuItem value="300_500">300000-500000</MenuItem>
