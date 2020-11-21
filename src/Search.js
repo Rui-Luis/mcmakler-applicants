@@ -11,7 +11,6 @@ import {
   Select,
 } from "@material-ui/core";
 
-import { useHistory, useLocation } from "react-router-dom";
 
 import SearchIcon from "@material-ui/icons/Search";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
@@ -21,14 +20,6 @@ function Search() {
   const [searchTerm, setSearchTerm] = useState("");
   const [bidTerm, setBidTerm] = useState("");
   const [statusTerm, setStatusTerm] = useState("");
-
-  const { search, pathname } = useLocation();
-  const { replace } = useHistory();
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    replace(`${pathname}/${search}`);
-  };
 
   return (
     <div>
@@ -57,7 +48,6 @@ function Search() {
               placeholder="Search for applicant"
               value={searchTerm}
               onChange={(event) => setSearchTerm(event.currentTarget.value)}
-              onSubmit={handleSubmit}
             />
           </Paper>
 
