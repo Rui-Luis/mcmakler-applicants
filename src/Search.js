@@ -108,12 +108,12 @@ function Search() {
       </div>
 
       <div className="Applicants-list">
-          <ApplicantsList
-            autoWidth="true"
-            searchTerm={searchTerm}
-            statusTerm={statusTerm}
-            bidTerm={bidTerm}
-          />
+        <ApplicantsList
+          autoWidth="true"
+          searchTerm={searchTerm}
+          statusTerm={statusTerm}
+          bidTerm={bidTerm}
+        />
       </div>
     </div>
   );

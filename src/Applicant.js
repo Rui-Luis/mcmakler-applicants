@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Paper,
-  Typography,
-  Avatar,
-  Box,
-} from "@material-ui/core";
+import { Paper, Typography, Avatar, Box } from "@material-ui/core";
 
 function generateRandomColor() {
   var letters = "0123456789ABCDEF";
@@ -20,44 +15,42 @@ function Applicant(props) {
   var letterOne = props.firstName.charAt(0);
   var letterTwo = props.lastName.charAt(0);
   var initials = letterOne + letterTwo;
-  
-  if (props.bid != null) {
-    var bidValue = "Bid " + props.bid + "€";
-  } else {
-    var bidValue = "No bid";
-  }
-  
+  var bidValue;
 
- 
+  if (props.bid != null) {
+    bidValue = "Bid " + props.bid + "€";
+  } else {
+    bidValue = "No bid";
+  }
 
   return (
-      <Paper
-        className="Applicant"
-        elevation={0}
-        square={false}
-        variant="outlined"
+    <Paper
+      className="Applicant"
+      elevation={0}
+      square={false}
+      variant="outlined"
+    >
+      <Avatar
+        style={{
+          backgroundColor: generateRandomColor(),
+        }}
       >
-        <Avatar
-          style={{
-            backgroundColor: generateRandomColor(),
-          }}
-        >
-          {initials}
-        </Avatar>
-        <Typography>
-          <b>
-            {props.firstName} {props.lastName}
-          </b>
-        </Typography>
-        <Typography>{props.phone}</Typography>
-        <Typography>{props.email}</Typography>
-        <Box className="Status-paper" square={false} elevation={0}>
-          <Typography>{props.status}</Typography>
-        </Box>
-        <Box className="Bid-paper" elevation={0}>
-          <Typography>{bidValue}</Typography>
-        </Box>
-      </Paper>
+        {initials}
+      </Avatar>
+      <Typography>
+        <b>
+          {props.firstName} {props.lastName}
+        </b>
+      </Typography>
+      <Typography>{props.phone}</Typography>
+      <Typography>{props.email}</Typography>
+      <Box className="Status-paper" square={false} elevation={0}>
+        <Typography>{props.status}</Typography>
+      </Box>
+      <Box className="Bid-paper" elevation={0}>
+        <Typography>{bidValue}</Typography>
+      </Box>
+    </Paper>
   );
 }
 
