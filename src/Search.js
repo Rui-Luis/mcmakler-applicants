@@ -6,7 +6,6 @@ import {
   Toolbar,
   Paper,
   FormControl,
-  GridList,
   InputBase,
   MenuItem,
   Select,
@@ -15,6 +14,7 @@ import {
 import { useHistory, useLocation } from "react-router-dom";
 
 import SearchIcon from "@material-ui/icons/Search";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import InputLabel from "@material-ui/core/InputLabel";
 
 function Search() {
@@ -33,9 +33,15 @@ function Search() {
   return (
     <div>
       <div className="Applicants-bar">
-        <Typography className="Applicants-title" variant="h5">
-          <b>Applicants List</b>
-        </Typography>
+        <div className="Title-bar">
+          <Toolbar>
+            <ArrowBackIcon />
+            <Typography className="Applicants-title" variant="h5">
+              <b>Applicants List</b>
+            </Typography>
+          </Toolbar>
+        </div>
+
         <Toolbar className="App-bar">
           <Paper
             component="form"
@@ -55,9 +61,11 @@ function Search() {
             />
           </Paper>
 
-          <FormControl>
-            <Paper component="form" elevation={0} square={false}>
-              <InputLabel>Status</InputLabel>
+          <Paper component="form" elevation={0} square={false}>
+            <FormControl>
+              <InputLabel margin="dense" shrink="true" className="Input-label">
+                Status
+              </InputLabel>
               <Select
                 variant="outlined"
                 className="Status-style"
@@ -71,37 +79,40 @@ function Search() {
                 <MenuItem value="Interested">Interested</MenuItem>
                 <MenuItem value="Offer Accepted">Offer Accepted</MenuItem>
               </Select>
-            </Paper>
-          </FormControl>
+            </FormControl>
+          </Paper>
 
           <Paper component="form" elevation={0}>
-            <Select
-              variant="outlined"
-              className="Bid-style"
-              value={bidTerm}
-              onChange={(event) => setBidTerm(event.target.value)}
-              defaultValue=""
-              placeholder="Bid"
-            >
-              <MenuItem value="">All</MenuItem>
-              <MenuItem value="less_than_100">Less than 100000</MenuItem>
-              <MenuItem value="100_300">100000-300000</MenuItem>
-              <MenuItem value="300_500">300000-500000</MenuItem>
-              <MenuItem value="more_than_500">More than 500000</MenuItem>
-            </Select>
+            <FormControl>
+              <InputLabel margin="dense" shrink="true" className="Input-label">
+                Bid
+              </InputLabel>
+              <Select
+                variant="outlined"
+                className="Bid-style"
+                value={bidTerm}
+                onChange={(event) => setBidTerm(event.target.value)}
+                defaultValue=""
+                placeholder="Bid"
+              >
+                <MenuItem value="">All</MenuItem>
+                <MenuItem value="less_than_100">Less than 100000</MenuItem>
+                <MenuItem value="100_300">100000-300000</MenuItem>
+                <MenuItem value="300_500">300000-500000</MenuItem>
+                <MenuItem value="more_than_500">More than 500000</MenuItem>
+              </Select>
+            </FormControl>
           </Paper>
         </Toolbar>
       </div>
 
       <div className="Applicants-list">
-        <GridList className="Grid-list">
           <ApplicantsList
             autoWidth="true"
             searchTerm={searchTerm}
             statusTerm={statusTerm}
             bidTerm={bidTerm}
           />
-        </GridList>
       </div>
     </div>
   );

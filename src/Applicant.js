@@ -2,7 +2,6 @@ import React from "react";
 import {
   Paper,
   Typography,
-  GridListTile,
   Avatar,
   Box,
 } from "@material-ui/core";
@@ -23,7 +22,6 @@ function Applicant(props) {
   var initials = letterOne + letterTwo;
 
   return (
-    <GridListTile>
       <Paper
         className="Applicant"
         elevation={0}
@@ -51,7 +49,6 @@ function Applicant(props) {
           <Typography>Bid {props.bid}€</Typography>
         </Box>
       </Paper>
-    </GridListTile>
   );
 }
 
