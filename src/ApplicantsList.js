@@ -29,12 +29,12 @@ function ApplicantsList({ searchTerm, statusTerm, bidTerm }) {
         ("" === bidTerm && applicant.bid > 0) ||
         ("less_than_100" === bidTerm && applicant.bid < 100000) ||
         ("100_300" === bidTerm &&
-          applicant.bid > 100000 &&
+          applicant.bid >= 100000 &&
           applicant.bid < 300000) ||
         ("300_500" === bidTerm &&
-          applicant.bid > 300000 &&
+          applicant.bid >= 300000 &&
           applicant.bid < 500000) ||
-        ("more_than_500" === bidTerm && applicant.bid > 500000)
+        ("more_than_500" === bidTerm && applicant.bid >= 500000)
     )
     .map((applicant) => {
       return (
