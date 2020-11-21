@@ -95,40 +95,10 @@ function Search() {
 
       <div className="Applicants-list">
         <GridList className="Grid-list">
-          <Typography className="Status-title">
-            <b>Appointment set</b>
-          </Typography>
           <ApplicantsList
             autoWidth="true"
             searchTerm={searchTerm}
-            statusTerm="Appointment Set"
-            bidTerm={bidTerm}
-          />
-          <Typography>
-            <b>Property Viewed</b>
-          </Typography>
-          <ApplicantsList
-            autoWidth="true"
-            searchTerm={searchTerm}
-            statusTerm="Property Viewed"
-            bidTerm={bidTerm}
-          />
-          <Typography>
-            <b>Interested</b>
-          </Typography>
-          <ApplicantsList
-            autoWidth="true"
-            searchTerm={searchTerm}
-            statusTerm="Interested"
-            bidTerm={bidTerm}
-          />
-          <Typography>
-            <b>Offer Accepted</b>
-          </Typography>
-          <ApplicantsList
-            autoWidth="true"
-            searchTerm={searchTerm}
-            statusTerm="Offer Accepted"
+            statusTerm={statusTerm}
             bidTerm={bidTerm}
           />
         </GridList>
