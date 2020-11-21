@@ -6,14 +6,18 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (
+    <div className="Base-container">
+    <div className="container">
     <Router>
-      <TopBar />
+        <TopBar />
       <div className="container">
         <Route path="/">
           <Search />
         </Route>
       </div>
     </Router>
+    </div>
+    </div>
   );
 }
 

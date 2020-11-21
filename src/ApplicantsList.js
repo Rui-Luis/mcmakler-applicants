@@ -15,7 +15,7 @@ function ApplicantsList({ searchTerm, statusTerm, bidTerm }) {
       });
   }, []);
 
-  return applicants
+  var filteredList = applicants
     .filter(
       (applicant) =>
         applicant.first_name === searchTerm ||
@@ -49,6 +49,17 @@ function ApplicantsList({ searchTerm, statusTerm, bidTerm }) {
         />
       );
     });
+
+  return (
+    <div className="Results-container">
+        <div className="Results">
+          <h4>{filteredList.length} results</h4>
+        </div>
+        <div className="Applicants-list">
+        {filteredList}
+        </div>
+    </div>
+  );
 }
 
 export default ApplicantsList;
