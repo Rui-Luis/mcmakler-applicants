@@ -40,10 +40,10 @@
     justify-content: center;
   }
   .Top-bar {
-    justify-content: center;
+    justify-content: space-between
   }
   .Title-bar {
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 
