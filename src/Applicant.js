@@ -31,6 +31,7 @@ function Applicant(props) {
       variant="outlined"
     >
       <Avatar
+      className="Avatar-style"
         style={{
           backgroundColor: generateRandomColor(),
         }}
@@ -47,6 +48,7 @@ function Applicant(props) {
       <Box className="Status-paper" square={false} elevation={0}>
         <Typography>{props.status}</Typography>
       </Box>
+      <br/>
       <Box className="Bid-paper" elevation={0}>
         <Typography>{bidValue}</Typography>
       </Box>
