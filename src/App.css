@@ -4,13 +4,12 @@
   height: 25vh;
   width: 25vh;
   align-items: center;
-  margin: 5vh;
+  margin: 1vh;
   justify-content: center;
 }
 
 .Applicants-title {
-background: white;
-padding-left: 5vh;
+  background: white;
 }
 
 .Applicants-list {
@@ -37,8 +36,8 @@ padding-left: 5vh;
   flex-direction: row;
   height: 40px;
   width: 250px;
-  margin: 2vh;
 }
+
 .Status-style {
   display: flex;
   flex-direction: row;
@@ -46,6 +45,7 @@ padding-left: 5vh;
   width: 170px;
   margin: 2vh;
 }
+
 .Bid-style {
   display: flex;
   flex-direction: row;
@@ -58,25 +58,24 @@ padding-left: 5vh;
   margin: 2vh;
 }
 
-.status {
-background-color: yellow;
+.Status-paper {
+  color: white;
+  padding: 3px;
+  background-color: #ffc922;
+  margin: 5px;
 }
 
-.bid {
-background-color: gray;
+.Bid-paper {
+  color: white;
+  padding: 3px;
+  background-color: gray;
+  margin: 5px;
 }
 
 .Top-bar {
-background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .Title {
   color: black;
-}
-
-.Grid-list {
-  flex-wrap: nowrap;
-  transform: translateZ(0);
-  overflow-x: auto;
-  overflow-y: hidden;
 }
