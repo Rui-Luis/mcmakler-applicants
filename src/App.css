@@ -43,7 +43,7 @@
     justify-content: space-between
   }
   .Title-bar {
-    justify-content: space-between;
+    margin-left: 100px;
   }
   .Applicants-list {
     max-height: 240px;
